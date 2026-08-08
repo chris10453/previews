@@ -445,7 +445,7 @@
       onLeaveBack:()=>gsap.to(cb,{y:'110%',duration:.4,ease:'power2.in'})});}
   }
   // audit fix: open/closed status badge, computed from the SAME hours data already stamped
-  // into the page ({{HOURS_ROWS}}, the tr/data-d rows in #hours-badge). Unparseable or missing
+  // into the page (the HOURS_ROWS slot: the tr/data-d rows in #hours-badge). Unparseable or missing
   // hours text ("Call to confirm" etc) leaves the plain hours line untouched instead of guessing.
   (()=>{
     const badge=document.getElementById('hours-badge'),out=document.getElementById('hours-badge-text');
