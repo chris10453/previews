@@ -1,0 +1,59 @@
+{
+  "slug": "taqueriatachingntampa",
+  "downloaded_at": "2026-08-07T08:40:15+00:00",
+  "asset_dir": "template/assets/taqueriatachingntampa/",
+  "attribution_note": "Photos come from the place's OWN Google photo-category set (Exterior, Inside, By owner, ...), not from the DOM sidebar, so 'People also search for' competitor shots cannot leak in. attribution=unknown means the category label was unrecognised -- eyeball before using.",
+  "photos": [
+    {
+      "file": "01.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmRtw-vIhxQDRXxGjZONj0hAy2a0_XgsCcbyHv9Xuw-DF8NL6_h1JAENJ2fjjoWLQwj_0dXXzpzTMBKH7tQlExl34FDBcw8HxxUaqZ-u0hfvhLATTwuc575JN6dmkLuW_DqI5rNGg=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmRtw-vIhxQDRXxGjZONj0hAy2a0_XgsCcbyHv9Xuw-DF8NL6_h1JAENJ2fjjoWLQwj_0dXXzpzTMBKH7tQlExl34FDBcw8HxxUaqZ-u0hfvhLATTwuc575JN6dmkLuW_DqI5rNGg=w239-h298-k-no",
+      "container": "maps_photo_category:All",
+      "attribution": "primary_listing",
+      "bytes": 593477,
+      "width": 1600,
+      "height": 1987
+    },
+    {
+      "file": "02.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWktMnhWExeVg1AgoklD4tj-etxUTVARIJKfHksr8E85iH-1tEl1otagc6r23rc37JXPbt1rnVy1KSOyV3aoxK9SUfADWC82thPqmstVq-EjPrB5IexOeVokoSlnKau4ZYxLzBTUWKurOC1p=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWktMnhWExeVg1AgoklD4tj-etxUTVARIJKfHksr8E85iH-1tEl1otagc6r23rc37JXPbt1rnVy1KSOyV3aoxK9SUfADWC82thPqmstVq-EjPrB5IexOeVokoSlnKau4ZYxLzBTUWKurOC1p=w298-h298-k-no",
+      "container": "maps_photo_category:Latest",
+      "attribution": "primary_listing",
+      "bytes": 716753,
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "file": "03.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm4sO1i14rcVqQ-71wOAlt-ERwqFg3tZexB09GXLoCbKfyRUoaDhpm-wZCerLUb25ynUpqCzxpocRy_ZhDuZDZFrVVYG_zWbEHdp0NaMY5frWIjyX9bGY60czirsHL1k_jl1XCLenh1KkQ=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm4sO1i14rcVqQ-71wOAlt-ERwqFg3tZexB09GXLoCbKfyRUoaDhpm-wZCerLUb25ynUpqCzxpocRy_ZhDuZDZFrVVYG_zWbEHdp0NaMY5frWIjyX9bGY60czirsHL1k_jl1XCLenh1KkQ=w224-h398-k-no",
+      "container": "maps_photo_category:Videos",
+      "attribution": "primary_listing",
+      "bytes": 231653,
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "file": "04.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnDxmOxqkorUwhs-RyGYXZ7xvieqvFSZlCM93zlWzjEkSSBTI9KMgO2uBnqQu0mmAyzsqMwCvBxZZirD_ldGNuje2u3NQEUoc5C6PEgbqz9jU0mvy2fDUQrxUryPt_m-4Ucwathu4XQatt0=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnDxmOxqkorUwhs-RyGYXZ7xvieqvFSZlCM93zlWzjEkSSBTI9KMgO2uBnqQu0mmAyzsqMwCvBxZZirD_ldGNuje2u3NQEUoc5C6PEgbqz9jU0mvy2fDUQrxUryPt_m-4Ucwathu4XQatt0=w224-h397-k-no",
+      "container": "maps_photo_category:Menu",
+      "attribution": "primary_listing",
+      "bytes": 855214,
+      "width": 1600,
+      "height": 2842
+    },
+    {
+      "file": "05.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmSU4HXeSv3JpbvsgteQSJEjJZ9fdLKQWi-Gxv5J2ruPPJagrDSG0FqURS75nbL4IR8VKqHWu8xfdELO9yg-gA-MTQbWSEZnqNKytfC2jtIedY40FX1wjQjtNQFYhbhHgqWHb210bY8MWA=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmSU4HXeSv3JpbvsgteQSJEjJZ9fdLKQWi-Gxv5J2ruPPJagrDSG0FqURS75nbL4IR8VKqHWu8xfdELO9yg-gA-MTQbWSEZnqNKytfC2jtIedY40FX1wjQjtNQFYhbhHgqWHb210bY8MWA=w397-h298-k-no",
+      "container": "maps_photo_category:Food & drink",
+      "attribution": "primary_listing",
+      "bytes": 431651,
+      "width": 1600,
+      "height": 1200
+    }
+  ],
+  "skipped": []
+}

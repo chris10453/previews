@@ -86,6 +86,21 @@
   .hero-card h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.08;font-weight:800}
   .hero-card .sub{margin:12px 0 24px;color:var(--soft);font-size:1.05rem;max-width:44ch;margin-inline:auto}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .hours-badge{display:inline-flex;align-items:center;gap:8px;margin:0 0 18px;padding:7px 14px;
+    border-radius:999px;background:var(--paper);border:1.5px solid var(--line);font-weight:700;
+    font-size:.9rem;max-width:100%}
+  .hb-dot{width:8px;height:8px;border-radius:50%;background:#a1a1aa;flex-shrink:0}
+  .hours-badge.is-open .hb-dot{background:#16a34a}
+  .hours-badge.is-closed .hb-dot{background:#dc2626}
+  .hb-table,.hb-table *{display:inline;border:0;font:inherit;color:var(--soft)}
+  .hb-table tr+tr::before{content:" · "}
+  .hb-table td:first-child::after{content:": "}
+  .hero-cta .hero-book:empty{display:none}
+  .hero-cta .hero-book a{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;font-weight:700;
+    font-size:1rem;border:1.5px solid var(--ink);color:var(--ink);background:transparent}
+  .hero-cta .hero-book a:hover{border-color:var(--accent);color:var(--accent)}
+  .price-note{font-weight:700;color:var(--accent);margin:8px 0 32px;font-size:.95rem}
+  .price-note:empty{display:none}
   @media(max-width:640px){
     .hero-photo{height:36svh;min-height:220px}
     .hero-card{margin:-56px 16px 0;padding:26px 20px 24px}
@@ -136,6 +151,7 @@
   .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .gal figure{border:1px solid var(--rule);background:var(--panel);padding:10px 10px 12px}
   .gal img{aspect-ratio:4/3;object-fit:cover;width:100%}
+  .gal img[src=''],.gal img:not([src]){display:none}
   .gal figcaption{font-size:.9rem;color:var(--soft);padding-top:10px;text-align:center}
   @media(max-width:700px){.gal{grid-template-columns:1fr;max-width:440px;margin-inline:auto}}
 
@@ -278,9 +294,11 @@
     <span class="eyebrow">W Waters Ave, Tampa</span>
     <h1>Taqueria Ta Chingon</h1>
     <p class="sub">Los auténticos tacos al pastor de trompo, straight off their own sign. Tacos start at $3. Closed Monday and Tuesday.</p>
+    <div class="hours-badge" id="hours-badge" aria-live="polite"><span class="hb-dot" aria-hidden="true"></span><span id="hours-badge-text"><table class="hb-table"><tr data-d="1,2"><td>Mon and Tue</td><td>Closed</td></tr><tr data-d="3,4"><td>Wed and Thu</td><td>11 AM to 9 PM</td></tr><tr data-d="5,6"><td>Fri and Sat</td><td>11 AM to 10 PM</td></tr><tr data-d="0"><td>Sunday</td><td>11 AM to 9 PM</td></tr></table></span></div>
     <div class="hero-cta">
       <a class="btn btn-ink" href="tel:+18138365044"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call in an order</a>
       <a class="btn btn-frame" href="https://maps.google.com/?q=1830+W+Waters+Ave,+Tampa,+FL+33604"><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg>Get directions</a>
+      <span class="hero-book"></span>
     </div>
   </div>
 </header>
@@ -306,6 +324,7 @@
   <div class="ledger rv"><div class="ledger-in">
     <h2>The card, as printed</h2>
     <p class="lede">Read off their own menu, line by line. The rest of the card runs burritos from $11.50, tortas from $10, and pastor by the pound at $31.</p>
+    <p class="price-note rv">Ask about pricing when you call — (813) 836-5044.</p>
     <div class="lrow"><div class="ltop"><h3>Tacos</h3><span class="dots" aria-hidden="true"></span><span class="price">$3</span></div><p>Their line reads contiene cebolla y cilantro. Pastor y piña, pollo and chorizo at $3; cecina, asada, supreme and birria at $4.</p></div>
     <div class="lrow"><div class="ltop"><h3>Quesabirria</h3><span class="dots" aria-hidden="true"></span><span class="price">$4.50</span></div><p>The birria taco with cheese. A full order with consomé is on the card too, at a price their own trompo artwork covers, so ask at the counter.</p></div>
     <div class="lrow"><div class="ltop"><h3>Alambre</h3><span class="dots" aria-hidden="true"></span><span class="price">$20</span></div><p>Queso, jamón, chile morrón, cebolla y tocino. Pastor y piña, pollo or chorizo $20; asada y pastor $22.</p></div>
@@ -328,8 +347,8 @@
   <p class="lede rv">Verbatim from our public Google reviews, trimmed for length. The names are the reviewers' own.</p>
   <div class="rev-grid">
     <div class="rev rv"><p>"Five star quality food. The tacos were authentic and the best I've had in the Tampa area. The asada (steak) taco was so tender it melted in your mouth."</p><footer>Rosa S<small>Google review</small></footer></div>
-    <div class="rev rv"><p>"Best tacos I had in a long time! The Al pastor and cecina were my favorite ones. I will definitely be coming more often for lunch."</p><footer>Izzy Cobos<small>Google review</small></footer></div>
-    <div class="rev rv"><p>"The food was top tier quality! My family and I were very impressed by the rich flavors and how delicious everything was. We especially loved the supreme tacos."</p><footer>Pamela Cáceres<small>Google review</small></footer></div>
+    <div class="rev rv"><p>"Best tacos I had in a long time! The Al pastor and cecina were my favorite ones. I will definitely be coming more often for lunch"</p><footer>Izzy Cobos<small>Google review</small></footer></div>
+    <div class="rev rv"><p>"The food was top tier quality! My family and I were very impressed by the rich flavors and how delicious everything was. We especially loved the supreme tacos (3rd photo); would totally recommend coming to this place! Very friendly and attentive staff."</p><footer>Pamela Cáceres<small>Google review</small></footer></div>
   </div>
   <a class="rev-more rv" href="https://www.google.com/maps/place/?q=place_id:ChIJqef-ojXBwogRUuQOjFCbVnY">Read all 220 reviews on Google</a>
 </div></section>
@@ -343,14 +362,14 @@
 </div></div>
 
 <section id="visit"><div class="wrap">
-  <h2 class="rv">Hours and directions</h2>
+  <h2 class="rv">Hours, and where to park</h2>
   <div class="visit-grid">
     <div class="visit-card rv">
       <h3>Hours</h3>
       <table id="hours"><tr data-d="1,2"><td>Mon and Tue</td><td>Closed</td></tr><tr data-d="3,4"><td>Wed and Thu</td><td>11 AM to 9 PM</td></tr><tr data-d="5,6"><td>Fri and Sat</td><td>11 AM to 10 PM</td></tr><tr data-d="0"><td>Sunday</td><td>11 AM to 9 PM</td></tr></table>
     </div>
     <div class="visit-card rv">
-      <h3>Where to find us</h3>
+      <h3>Where to park</h3>
       <div class="info-row"><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg><p>1830 W Waters Ave, Tampa, FL 33604<br><a class="dir-link" href="https://maps.google.com/?q=1830+W+Waters+Ave,+Tampa,+FL+33604">Get directions</a></p></div>
       <div class="info-row"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><p><a href="tel:+18138365044">(813) 836-5044</a></p></div>
       <div class="info-row"><svg class="ic" aria-hidden="true"><use href="#i-storefront"/></svg><p>Serving Tampa</p></div>
@@ -364,16 +383,7 @@
 <section id="quote" style="padding-top:0"><div class="wrap form-wrap">
   <h2 class="rv">Message the taquería</h2>
   <p class="lede rv" style="margin-bottom:8px">A question about the menu, a large order, or the hours. The quickest answer is still the phone.</p>
-  <form id="qform" method="post">
-    <label for="f-name">Name</label>
-    <input id="f-name" name="name" required placeholder="Your name">
-    <label for="f-phone">Phone</label>
-    <input id="f-phone" name="phone" type="tel" required placeholder="(555) 555-5555">
-    <label for="f-msg">What can we get you?</label>
-    <textarea id="f-msg" name="message" rows="4" required placeholder="Order, headcount, or a question about the menu"></textarea>
-    <div style="margin-top:20px"><button class="btn btn-ink" type="submit">Send message</button></div>
-    <div class="form-ok" id="form-ok" role="status">Preview mode: this form is not wired up yet, so nothing was sent. Call the shop to reach them directly.</div>
-  </form>
+  <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:22px"><a class="btn btn-ink" href="tel:+18138365044"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call (813) 836-5044</a><a class="btn btn-ink" href="sms:+18138365044"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Text (813) 836-5044</a></div>
 </div></section>
 
 <footer class="site"><div class="wrap">
@@ -434,14 +444,71 @@
       onEnter:()=>gsap.to(cb,{y:0,duration:.6,ease:'back.out(1.4)'}),
       onLeaveBack:()=>gsap.to(cb,{y:'110%',duration:.4,ease:'power2.in'})});}
   }
+  // audit fix: open/closed status badge, computed from the SAME hours data already stamped
+  // into the page ({{HOURS_ROWS}}, the tr/data-d rows in #hours-badge). Unparseable or missing
+  // hours text ("Call to confirm" etc) leaves the plain hours line untouched instead of guessing.
+  (()=>{
+    const badge=document.getElementById('hours-badge'),out=document.getElementById('hours-badge-text');
+    if(!badge||!out)return;
+    const rows=[...badge.querySelectorAll('.hb-table tr')];
+    if(!rows.length)return;
+    const DAY=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    const toMin=(h,m,ap)=>{h=(+h)%12;if(/pm/i.test(ap))h+=12;return h*60+(+m||0)};
+    function parseDay(txt){
+      txt=(txt||'').trim();
+      if(!txt)return null;
+      if(/^closed$/i.test(txt))return[];
+      const ranges=[];
+      for(const part of txt.split(',')){
+        const m=part.match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm)?\s*(?:to|-|–|—)\s*(\d{1,2})(?::(\d{2}))?\s*(am|pm)?/i);
+        if(!m)return null;
+        let[,h1,m1,p1,h2,m2,p2]=m;
+        if(!p1&&p2)p1=p2; if(!p2&&p1)p2=p1;
+        if(!p1||!p2)return null;
+        let s=toMin(h1,m1,p1),e=toMin(h2,m2,p2);
+        if(e<=s)e+=1440;
+        ranges.push([s,e]);
+      }
+      return ranges;
+    }
+    const byDay={};
+    rows.forEach(r=>{
+      const ds=(r.dataset.d||'').split(',').filter(Boolean).map(Number);
+      const cell=r.cells[1];
+      if(!ds.length||!cell)return;
+      const parsed=parseDay(cell.textContent);
+      ds.forEach(d=>{byDay[d]=parsed});
+    });
+    const fmt=t=>{t=((t%1440)+1440)%1440;let h=Math.floor(t/60),m=t%60,ap=h>=12?'PM':'AM';h=h%12||12;
+      return m?`${h}:${String(m).padStart(2,'0')} ${ap}`:`${h} ${ap}`};
+    const now=new Date(),dow=now.getDay(),mins=now.getHours()*60+now.getMinutes();
+    const today=byDay[dow];
+    if(Array.isArray(today)){
+      for(const[s,e]of today){
+        if(mins>=s&&mins<e){out.textContent='Open now · closes '+fmt(e);badge.classList.add('is-open');return}
+      }
+    }
+    const yest=byDay[(dow+6)%7];
+    if(Array.isArray(yest)){
+      for(const[,e]of yest){
+        if(e>1440){const e2=e-1440;if(mins<e2){out.textContent='Open now · closes '+fmt(e2);badge.classList.add('is-open');return}}
+      }
+    }
+    if(today===undefined||today===null)return; // unparseable/missing -> keep the plain hours line
+    for(let i=0;i<7;i++){
+      const d=(dow+i)%7,ranges=byDay[d];
+      if(!Array.isArray(ranges))continue;
+      for(const[s]of ranges){
+        const abs=i*1440+s;
+        if(abs>mins){out.textContent='Closed · opens '+fmt(s)+(i===0?'':' '+DAY[d]);badge.classList.add('is-closed');return}
+      }
+    }
+  })();
   // footer "today's hours": read the row whose data-d list contains today (0=Sun..6=Sat).
   // No-JS fallback: the slot is a plain "Hours" link to #visit.
   (()=>{const t=document.getElementById('ft-today');if(!t)return;
     const row=[...document.querySelectorAll('#hours tr')].find(r=>(r.dataset.d||'').split(',').includes(String(new Date().getDay())));
     if(row&&row.cells.length>1)t.textContent='Today: '+row.cells[1].textContent;})();
-  // ponytail: preview-mode form, shows success only; wire to a form backend when the site is sold
-  document.getElementById('qform').addEventListener('submit',e=>{e.preventDefault();
-    document.getElementById('form-ok').style.display='block';e.target.reset();});
 </script>
 </body>
 </html>
