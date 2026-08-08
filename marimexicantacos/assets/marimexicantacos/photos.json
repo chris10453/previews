@@ -1,0 +1,69 @@
+{
+  "slug": "marimexicantacos",
+  "downloaded_at": "2026-08-07T08:41:37+00:00",
+  "asset_dir": "template/assets/marimexicantacos/",
+  "attribution_note": "Photos come from the place's OWN Google photo-category set (Exterior, Inside, By owner, ...), not from the DOM sidebar, so 'People also search for' competitor shots cannot leak in. attribution=unknown means the category label was unrecognised -- eyeball before using.",
+  "photos": [
+    {
+      "file": "01.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn3v_AsLFMIS3PkKHXCKzrHFR9Hhw0vZ0kqRjSk3d6a49bxS2yeOIb7svDbZXVRY2ABmsiFH5sn1U31mhlxSmJjVPtX9HKD3NvkHJFlbwaO5Xd4Y3ZMaXS4h0pFxGiEMobNxFER02UNRrRe=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn3v_AsLFMIS3PkKHXCKzrHFR9Hhw0vZ0kqRjSk3d6a49bxS2yeOIb7svDbZXVRY2ABmsiFH5sn1U31mhlxSmJjVPtX9HKD3NvkHJFlbwaO5Xd4Y3ZMaXS4h0pFxGiEMobNxFER02UNRrRe=w224-h298-k-no",
+      "container": "maps_photo_category:All",
+      "attribution": "primary_listing",
+      "bytes": 785539,
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "file": "02.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn7PXwxZTxQUVYC6hh4O486H3SlUgX-Gzr9R0TXUh4v2PERFeKb1RRiPozXoeYT-t2m5NnZZ8j7VZoMBq89wqxqqy22jHnaKTgGWqXwITtMPsk6FlHI-oXXuzhgjKlLQxBkKCWpc33dG6g=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn7PXwxZTxQUVYC6hh4O486H3SlUgX-Gzr9R0TXUh4v2PERFeKb1RRiPozXoeYT-t2m5NnZZ8j7VZoMBq89wqxqqy22jHnaKTgGWqXwITtMPsk6FlHI-oXXuzhgjKlLQxBkKCWpc33dG6g=w397-h298-k-no",
+      "container": "maps_photo_category:Latest",
+      "attribution": "primary_listing",
+      "bytes": 740008,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "file": "03.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmlSATBZlUB_LzDfURHvd5jAIW4h23XBfMLl9AIzKy7UmklnFrS2zIc5OTQVdMqGKKvtZuqSn2SGtyZfMBW_fAXJnQ-b3q6MD3j9ckYgnGgHGVXoYo2XCCl-KCe4dhRYEr-8pBry2u-tS1j=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmlSATBZlUB_LzDfURHvd5jAIW4h23XBfMLl9AIzKy7UmklnFrS2zIc5OTQVdMqGKKvtZuqSn2SGtyZfMBW_fAXJnQ-b3q6MD3j9ckYgnGgHGVXoYo2XCCl-KCe4dhRYEr-8pBry2u-tS1j=w529-h298-k-no",
+      "container": "maps_photo_category:Videos",
+      "attribution": "primary_listing",
+      "bytes": 187718,
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "file": "04.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmZH2xFA4711DSXhkKiQjVK-vfM4jVT6RKfLtjznuCQ8MNT3_R22wklvYMPQB3exTQc3YcypPhcCqTkrINM_pKYZGNsyaNLQ383eP9Ku5sf7_vjo0U2Nmz4ZnJWu-Frzybbc1zpCWcGsAmw=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmZH2xFA4711DSXhkKiQjVK-vfM4jVT6RKfLtjznuCQ8MNT3_R22wklvYMPQB3exTQc3YcypPhcCqTkrINM_pKYZGNsyaNLQ383eP9Ku5sf7_vjo0U2Nmz4ZnJWu-Frzybbc1zpCWcGsAmw=w395-h298-k-no",
+      "container": "maps_photo_category:Menu",
+      "attribution": "primary_listing",
+      "bytes": 698272,
+      "width": 1600,
+      "height": 1205
+    },
+    {
+      "file": "05.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlVpc9xKQuOgc1lFONRC7p3L3A4ghvnyJdbf-3UQZi-JHXHBugUJzT1C96InKf-fTWQLFZIqd3R5v2cowSmWQI3p-EhdaPx2jl7EJ-putkl7U-GRxKyfvuRLnVFbg1ANapfunLYN91ICMeT=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlVpc9xKQuOgc1lFONRC7p3L3A4ghvnyJdbf-3UQZi-JHXHBugUJzT1C96InKf-fTWQLFZIqd3R5v2cowSmWQI3p-EhdaPx2jl7EJ-putkl7U-GRxKyfvuRLnVFbg1ANapfunLYN91ICMeT=w397-h298-k-no",
+      "container": "maps_photo_category:Food & drink",
+      "attribution": "primary_listing",
+      "bytes": 645361,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "file": "06.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWksIu6tP3YKuBhkVI0ECoShcZnHx8-ljDhsxAZo2hOhLVg_DkUMQVBaAhQCBgDMF30pPL-ADn4gnjuc4k4QizVMrh-OhFbUb_ceFlfdCXUMzoCo9uL0YD7lLjiFuN26lS0Gxdeg6PkjS94=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWksIu6tP3YKuBhkVI0ECoShcZnHx8-ljDhsxAZo2hOhLVg_DkUMQVBaAhQCBgDMF30pPL-ADn4gnjuc4k4QizVMrh-OhFbUb_ceFlfdCXUMzoCo9uL0YD7lLjiFuN26lS0Gxdeg6PkjS94=w224-h298-k-no",
+      "container": "maps_photo_category:Al pastor",
+      "attribution": "unknown",
+      "bytes": 824517,
+      "width": 1600,
+      "height": 2133
+    }
+  ],
+  "skipped": []
+}

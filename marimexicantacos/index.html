@@ -15,7 +15,7 @@
 <meta name="theme-color" content="#d92d20">
 <link rel="icon" href="assets/marimexicantacos/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/marimexicantacos/favicon.svg">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Mari Mexican Tacos","servesCuisine":"Mexican","priceRange":"$10-20","telephone":"+18139991303","url":"https://chris10453.github.io/previews/marimexicantacos/","image":"https://chris10453.github.io/previews/marimexicantacos/assets/marimexicantacos/hero.jpg","address":{"@type":"PostalAddress","streetAddress":"4337 W Kennedy Blvd","addressLocality":"Tampa","addressRegion":"FL","postalCode":"33609"},"hasMap":"https://maps.google.com/?q=4337+W+Kennedy+Blvd,+Tampa,+FL+33609","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"199"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"11:00","closes":"20:00"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Mari Mexican Tacos","servesCuisine":"Mexican","priceRange":"$10-20","telephone":"+18139991303","url":"http://100.88.57.126:8181/website-flip/marimexicantacos.html","image":"http://100.88.57.126:8181/website-flip/assets/marimexicantacos/hero.jpg","address":{"@type":"PostalAddress","streetAddress":"4337 W Kennedy Blvd","addressLocality":"Tampa","addressRegion":"FL","postalCode":"33609"},"hasMap":"https://maps.google.com/?q=4337+W+Kennedy+Blvd,+Tampa,+FL+33609","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"199"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"11:00","closes":"20:00"}]}</script>
 <!-- SHARP variant: dark poster energy. Anton display caps + Archivo body, all-sharp corners,
      full-bleed photo hero, asymmetric gallery, ledger-style reviews. Same token set as template.html. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --accent:#d92d20;
+    --accent:#d92d20;--on-accent:#fff;--band-bg:#d92d20;
     --bg:#0b0b0c; --panel:#151517; --ink:#f5f5f4; --soft:#b3b3b6; --line:#26262a;
   }
   /* shape rule: everything square. No radius anywhere on this template. */
@@ -45,9 +45,18 @@
     transition:transform .15s ease;cursor:pointer;border:0}
   .btn:active{transform:translateY(1px) scale(.98)}
   .btn-light{background:var(--ink);color:var(--bg)}
+  /* audit fix (2026-08-07): the call/text contact block (replaces the old dead form) uses
+     btn-solid/btn-ghost, but this template never defined them -- both buttons rendered with no
+     background/border at all. Matches the accent-solid / bordered-ghost pattern already used in
+     template.html, template-warm.html and template-lean.html. */
+  .btn-solid{background:var(--accent);color:#fff}
+  .btn-ghost{border:2px solid var(--line);background:var(--panel);color:var(--ink)}
   .btn-light:hover{transform:translateY(-2px)}
   .btn-line{border:2px solid rgba(245,245,244,.5);color:var(--ink);background:rgba(11,11,12,.35);backdrop-filter:blur(4px)}
   .btn-line:hover{border-color:var(--accent)}
+  /* a conf with no CTA_SECONDARY text left an empty href="" dead link in the hero (renderguard
+     dead-controls, 2026-08-07) -- same :empty collapse convention .hero-book already uses */
+  .btn-line:empty{display:none}
 
   /* nav */
   nav{position:sticky;top:0;z-index:50;background:rgba(11,11,12,.88);backdrop-filter:blur(8px);
@@ -67,12 +76,32 @@
   /* object-position biased upward: storefront signage usually lives in the top of the photo */
   .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%}
   .hero-scrim{position:absolute;inset:0;background:
-    linear-gradient(to top,rgba(11,11,12,.92) 0%,rgba(11,11,12,.42) 34%,rgba(11,11,12,.08) 66%,rgba(11,11,12,.25) 100%)}
+    linear-gradient(to top,rgba(11,11,12,.94) 0%,rgba(11,11,12,.62) 34%,rgba(11,11,12,.34) 66%,rgba(11,11,12,.46) 100%)}
   .hero-in{position:relative;width:100%;padding-bottom:56px}
   .hero h1{font-size:clamp(2.4rem,6.2vw,4.6rem);line-height:1.02;max-width:24ch;text-shadow:0 2px 18px rgba(11,11,12,.6)}
   .hero h1 em{font-style:normal;color:var(--accent)}
   .hero p{margin:18px 0 28px;font-size:1.1rem;color:#d9d9dc;max-width:48ch;text-shadow:0 1px 10px rgba(11,11,12,.7)}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  /* audit fix (2026-08-07): open/closed status badge, hero-book button, price note. Colors here
+     use this template's dark-on-photo palette -- the badge floats directly on the scrim, not
+     inside a solid panel. See template.html for the shared rationale comment. */
+  .hours-badge{display:inline-flex;align-items:center;gap:8px;margin:0 0 20px;padding:7px 14px;
+    border-radius:999px;background:rgba(11,11,12,.4);border:1.5px solid rgba(245,245,244,.35);
+    backdrop-filter:blur(4px);font-weight:700;font-size:.9rem;max-width:100%}
+  .hb-dot{width:8px;height:8px;border-radius:50%;background:#b3b3b6;flex-shrink:0}
+  .hours-badge.is-open .hb-dot{background:#4ade80}
+  .hours-badge.is-closed .hb-dot{background:#f87171}
+  .hb-table,.hb-table *{display:inline;border:0;font:inherit;color:#d9d9dc}
+  .hb-table tr+tr::before{content:" · "}
+  .hb-table td:first-child::after{content:": "}
+  .hero-cta .hero-book:empty{display:none}
+  .hero-cta a.btn:empty{display:none}
+  .hero-cta .hero-book a{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;font-weight:700;
+    font-size:1rem;border:2px solid rgba(245,245,244,.5);color:var(--ink);background:rgba(11,11,12,.35);
+    backdrop-filter:blur(4px)}
+  .hero-cta .hero-book a:hover{border-color:var(--accent)}
+  .price-note{font-weight:700;color:var(--accent);margin:8px 0 32px;font-size:.95rem}
+  .price-note:empty{display:none}
   @media(max-width:640px){.hero{min-height:88svh}.hero-in{padding-bottom:44px}}
 
   /* trust: hairline ledger row */
@@ -96,18 +125,37 @@
   .svc h3 .ic{color:var(--accent);width:1.15rem;height:1.15rem;margin-right:10px}
   .svc p{color:var(--soft);font-size:1rem}
   @media(max-width:700px){.svc{grid-template-columns:1fr;gap:6px}}
+  /* site-judge 2026-08-07 (lasvegastattooco): a business with only 3 real services (S4 left empty
+     per SECTION-BANK -- "no section is padded") rendered a 4th row anyway: a broken icon reference
+     plus a blank bordered strip, since .svc has no empty-guard (the gallery already has one for the
+     same reason). The DESC paragraph is genuinely :empty when S4_DESC="", so gate on that. */
+  .svc:has(p:empty){display:none}
 
   /* gallery: asymmetric grid */
   .gal{display:grid;grid-template-columns:1.45fr 1fr;grid-template-rows:1fr 1fr;gap:12px}
   .gal img{width:100%;height:100%;object-fit:cover}
   .gal img:first-child{grid-row:1/3;min-height:420px}
   .gal img:not(:first-child){aspect-ratio:16/10}
+  /* E-cat: an empty GAL_3 slot (2-photo pack) was rendering as an empty-src img tag -- a visible
+     black box in the second-column bottom cell on both breakpoints. Hide it and let the one real
+     small image fill the whole right column instead of leaving a hole under it. */
+  .gal img[src=""]{display:none}
+  .gal:has(img:nth-child(3)[src=""]) img:nth-child(2){grid-row:1/3;min-height:0;height:100%}
   @media(max-width:700px){
     .gal{grid-template-columns:1fr 1fr;grid-template-rows:auto auto}
     /* no forced ratio here: a forced 4/3 re-crops an already-measured crop and shaves signage, phone
        digits or social glyphs off the one tile that carries them. It is full width already, so let the
        image's own ratio stand -- the width/height attrs (measured at stamp time) reserve the box. */
     .gal img:first-child{grid-row:auto;grid-column:1/3;min-height:0;height:auto}
+    /* site-judge 2026-08-07 (lasvegastattooco): the desktop-only "expand img 2 into the empty img 3
+       slot" rule above isn't scoped to desktop, so on mobile it fights the auto-flow reset on
+       img:first-child and the two images swap order (the small/secondary photo renders ABOVE the
+       curated lead photo). First attempt at this fix used a plain `.gal img:nth-child(2)` selector,
+       which LOSES to the original :has()-qualified rule on specificity regardless of source order
+       (0,2,1) < (0,3,1) -- verified by measuring the rendered order, still wrong after that "fix".
+       Matching the same :has() qualifier here brings it to equal specificity, so source order (this
+       rule is later) decides it, same as img:first-child's own reset just above. */
+    .gal:has(img:nth-child(3)[src=""]) img:nth-child(2){grid-row:auto}
   }
   /* below 560 the two small tiles land at ~167px, too small to read a sign or a fade in */
   @media(max-width:560px){
@@ -146,7 +194,7 @@
     .rev:nth-child(2),.rev:nth-child(3){padding-left:0}}
 
   /* CTA band: full-bleed accent */
-  .band{background:var(--accent);color:#0b0b0c;padding:72px 0;text-align:left}
+  .band{background:var(--band-bg);color:var(--on-accent);padding:72px 0;text-align:left}
   .band-in{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
   .band h2{margin-bottom:6px;color:#0b0b0c}
   .band p{font-weight:500;opacity:.85}
@@ -180,7 +228,7 @@
     font:inherit;background:var(--panel);color:var(--ink)}
   form input:focus,form textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
   form ::placeholder{color:#7c7c82}
-  .form-ok{display:none;background:#10261c;border:1px solid #1d5c40;color:#8fe6b8;padding:16px;font-weight:600;margin-top:18px}
+  
 
   /* footer: the real one (address / today's hours / phone / socials) */
   footer.site{border-top:1px solid var(--line);padding:36px 0 40px;color:var(--soft);font-size:.92rem}
@@ -238,6 +286,12 @@
     .js .hero-bg,.why-img img{animation:none}
     .btn,.svc{transition:none}
   }
+
+  /* On phones a sticky call bar is pinned to the bottom, so the contact block's Call button is
+     both redundant AND occludable -- it can sit fully on-screen yet be unclickable under the bar
+     (renderguard fixed-overlap, the E41 class). Drop it there and let Text carry the block; the
+     :has() guard means pages WITHOUT a call bar keep both buttons. */
+  @media(max-width:820px){body:has(a.callbar) .contact-actions a[href^="tel:"]{display:none}}
 </style>
 <style>@media(max-width:820px){#preview-note{bottom:58px}body{padding-bottom:96px}}</style></head>
 <body>
@@ -279,9 +333,11 @@
   <div class="wrap hero-in">
     <h1><span class="hw" style="--i:0">Tacos</span> <span class="hw" style="--i:1">from</span> <em><span class="hw" style="--i:2">$3.25,</span></em> <span class="hw" style="--i:3">chalked</span> <span class="hw" style="--i:4">on</span> <span class="hw" style="--i:5">the</span> <span class="hw" style="--i:6">board</span> <span class="hw" style="--i:7">behind</span> <span class="hw" style="--i:8">the</span> <span class="hw" style="--i:9">counter.</span></h1>
     <p>Counter service on West Kennedy. 4.9 stars across 199 Google reviews, and not one of the 199 is a single star. Closed Sundays.</p>
+    <div class="hours-badge" id="hours-badge" aria-live="polite"><span class="hb-dot" aria-hidden="true"></span><span id="hours-badge-text"><table class="hb-table"><tr data-d="1,2,3,4,5,6"><td>Mon to Sat</td><td>11 AM to 8 PM</td></tr><tr data-d="0"><td>Sunday</td><td>Closed</td></tr></table></span></div>
     <div class="hero-cta">
       <a class="btn btn-light" href="tel:+18139991303"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call in an order</a>
       <a class="btn btn-line" href="#services">Read the board</a>
+      <span class="hero-book"></span>
     </div>
   </div>
 </header>
@@ -296,17 +352,18 @@
 <section id="services"><div class="wrap">
   <h2 class="rv">Off the chalk board</h2>
   <p class="lede rv">Every figure here was read off the board behind their counter, which you can see for yourself further down. Nothing rounded, nothing added.</p>
+  <p class="price-note rv"></p>
   <div class="svc-list">
-    <div class="svc rv"><h3><svg class="ic" aria-hidden="true"><use href="#i-pepper"/></svg>Tacos, 3.25 to 3.95</h3><p>Their board sets the terms: American style is lettuce, tomato and cheese, Mexican style is onions and cilantro. Veggies 3.25; tinga chicken, grill chicken, carnitas, ground beef and chorizo 3.50; steak or steak and chorizo 3.75; shrimp 3.95.</p></div>
-    <div class="svc rv"><h3><svg class="ic" aria-hidden="true"><use href="#i-bowl-food"/></svg>Three queso birria tacos, 14.50</h3><p>Chalked with the consome included. Nixon ordered the birria with cheese, and Lauren Farrar's boyfriend called them fantastic.</p></div>
-    <div class="svc rv"><h3><svg class="ic" aria-hidden="true"><use href="#i-cooking-pot"/></svg>Weekday lunch, 11.95</h3><p>Monday to Friday, 11 to 2. Pick tacos, a burrito, empanadas, a quesadilla or sopes; the board says all five come with rice and beans.</p></div>
-    <div class="svc rv"><h3><svg class="ic" aria-hidden="true"><use href="#i-fire"/></svg>Guacamole, 5.99</h3><p>Eight ounces, or 8.49 with chips. Lauren Farrar calls it the freshest guac she has had at a restaurant. Cheese dip is 5.49, salsa with chips 7.50.</p></div>
+    <div class="svc rv"><h3><svg class="ic" aria-hidden="true"><use href="#i-pepper"/></svg>Tacos, $3.25 to $3.95</h3><p>Their board sets the terms: American style is lettuce, tomato and cheese, Mexican style is onions and cilantro. Veggies $3.25; tinga chicken, grill chicken, carnitas, ground beef and chorizo $3.50; steak or steak and chorizo $3.75; shrimp $3.95.</p></div>
+    <div class="svc rv"><h3><svg class="ic" aria-hidden="true"><use href="#i-bowl-food"/></svg>Three queso birria tacos, $14.50</h3><p>Chalked with the consome included. Nixon ordered the birria with cheese, and Lauren Farrar's boyfriend called them fantastic.</p></div>
+    <div class="svc rv"><h3><svg class="ic" aria-hidden="true"><use href="#i-cooking-pot"/></svg>Weekday lunch, $11.95</h3><p>Monday to Friday, 11 to 2. Pick tacos, a burrito, empanadas, a quesadilla or sopes; the board says all five come with rice and beans.</p></div>
+    <div class="svc rv"><h3><svg class="ic" aria-hidden="true"><use href="#i-fire"/></svg>Guacamole, $5.99</h3><p>Eight ounces, or $8.49 with chips. Lauren Farrar calls it the freshest guac she has had at a restaurant. Cheese dip is $5.49, salsa with chips $7.50.</p></div>
   </div>
 </div></section>
 
 <section id="photos" style="padding-top:0"><div class="wrap">
   <h2 class="rv">What comes out</h2>
-  <p class="lede rv">Three of their own Google photos. The board is up above if you want to check the numbers against it.</p>
+  <p class="lede rv">Three of their own Google photos. The board with every price is further down if you want to check the numbers against it.</p>
   <div class="gal rv">
     <img src="assets/marimexicantacos/tacos.jpg" alt="Three tacos on checked paper with cucumber, radish and lime" width="1000" height="915" loading="lazy" decoding="async">
     <img src="assets/marimexicantacos/front.jpg" alt="The Mari Mexican Tacos sign lit above the striped awning on W Kennedy Blvd" width="1250" height="780" loading="lazy" decoding="async">
@@ -318,7 +375,7 @@
   <div class="why">
     <h2 class="rv">The board behind the counter</h2>
     <div class="why-rows">
-      <div class="wrow rv"><span class="wnum" aria-hidden="true">1</span><p><b>Nothing on this page was rounded.</b> Tacos at 3.25, 3.50, 3.75 and 3.95. Three queso birria with consome at 14.50. Weekday lunch at 11.95. All of it chalked up in the photo beside this.</p></div>
+      <div class="wrow rv"><span class="wnum" aria-hidden="true">1</span><p><b>Nothing on this page was rounded.</b> Tacos at $3.25, $3.50, $3.75 and $3.95. Three queso birria with consome at $14.50. Weekday lunch at $11.95. All of it chalked up in the board photo below.</p></div>
       <div class="wrow rv"><span class="wnum" aria-hidden="true">2</span><p><b>199 reviews, not one single star.</b> Google's own breakdown reads 192 fives and zero ones. Thomas Reynolds calls it a great hidden gem; Danielle Knight says the owner came back to check on them more than once.</p></div>
       <div class="wrow rv"><span class="wnum" aria-hidden="true">3</span><p><b>The green sauce got its own paragraph.</b> A reviewer writing as JOVA NNE said it took the tacos to another level, and named Jose in the same breath for going above and beyond.</p></div>
     </div>
@@ -355,7 +412,7 @@
 </div></div>
 
 <section class="find" id="visit"><div class="wrap">
-  <h2 class="rv">Find us</h2>
+  <h2 class="rv">Come see us</h2>
   <div class="find-grid rv">
     <div><h3>Address</h3><p>4337 W Kennedy Blvd, Tampa, FL 33609</p><a class="dir-link" href="https://maps.google.com/?q=4337+W+Kennedy+Blvd,+Tampa,+FL+33609">Get directions</a></div>
     <div><h3>Phone</h3><p><a href="tel:+18139991303">(813) 999-1303</a></p></div>
@@ -366,18 +423,12 @@
 </div></section>
 
 <section id="quote"><div class="wrap form-wrap">
-  <h2 class="rv">Send the counter a note</h2>
+  <h2 class="rv">Call or text the counter</h2>
   <p class="lede rv" style="margin-bottom:8px">A question about the board, a big order, or the weekday lunch. The fastest answer is still the phone.</p>
-  <form id="qform" method="post">
-    <label for="f-name">Name</label>
-    <input id="f-name" name="name" required placeholder="Your name">
-    <label for="f-phone">Phone</label>
-    <input id="f-phone" name="phone" type="tel" required placeholder="(555) 555-5555">
-    <label for="f-msg">What can we get you?</label>
-    <textarea id="f-msg" name="message" rows="4" required placeholder="Order, headcount, or a question about the board"></textarea>
-    <div style="margin-top:20px"><button class="btn btn-light" type="submit">Send message</button></div>
-    <div class="form-ok" id="form-ok" role="status">Preview mode: this form is not wired up yet, so nothing was sent. Call the shop to reach them directly.</div>
-  </form>
+  <div class="contact-actions" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px">
+      <a class="btn btn-solid" href="tel:+18139991303">Call (813) 999-1303</a>
+      <a class="btn btn-ghost" href="sms:+18139991303">Text (813) 999-1303</a>
+    </div>
 </div></section>
 
 
@@ -401,6 +452,9 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 <script>
   document.documentElement.classList.add('js');
+  // a conf with no CTA_SECONDARY leaves a dead href="" anchor in the hero -- CSS :empty hides it
+  // visually, but renderguard's dead-controls check reads the DOM directly, so remove the node too.
+  document.querySelectorAll('a.btn-line').forEach(a=>{if(!a.textContent.trim()&&!a.getAttribute('href'))a.remove()});
   const useGsap=window.gsap&&window.ScrollTrigger&&matchMedia('(prefers-reduced-motion: no-preference)').matches;
   if(!useGsap){
     // fallback reveal: CDN blocked or reduced motion (page fully visible without JS at all)
@@ -409,6 +463,16 @@
     document.querySelectorAll('.rv').forEach(el=>io.observe(el));
   }else{
     gsap.registerPlugin(ScrollTrigger);
+    // A page opened straight at a fragment (#services, #reviews) -- exactly what happens when Chris
+    // texts a link to one section, or someone refreshes mid-scroll -- lands pre-scrolled BEFORE the
+    // triggers are positioned, so ScrollTrigger's start/end math is computed against the wrong scroll
+    // offset and those sections stay stuck at their pre-animation opacity. Two independent judge
+    // panels hit it; one reproduced a section sitting at opacity 0.55 while 843px below a 720px
+    // viewport, i.e. never in view yet already part-way animated. Result: a customer following a deep
+    // link sees an EMPTY box. Refresh once everything is laid out, and again after the browser has
+    // finished its own hash scroll. (2026-08-07)
+    addEventListener('load',()=>{ScrollTrigger.refresh();
+      if(location.hash){requestAnimationFrame(()=>requestAnimationFrame(()=>ScrollTrigger.refresh()))}});
     const st=(t,extra)=>({scrollTrigger:{trigger:t,start:'top 82%'},...extra});
     document.querySelectorAll('h2.rv,p.lede').forEach(el=>gsap.from(el,st(el,{y:26,opacity:0,duration:.7,ease:'power3'})));
     // service ledger rows slide in from the left, staggered
@@ -429,6 +493,12 @@
     document.querySelectorAll('.trust b').forEach(b=>{
       const n=b.childNodes[0],m=/^(\d+(?:\.\d)?)/.exec(n.textContent||'');if(!m)return;
       const target=parseFloat(m[1]),dec=m[1].includes('.')?1:0,rest=n.textContent.slice(m[1].length),o={v:0};
+      // A decimal here is the Google RATING -- counting it up from 0 means the page briefly displays a
+      // false rating (a backgrounded tab froze one at '0.5 stars' for seconds; judge panel 2026-08-07).
+      // These numbers are the entire trust claim, so never animate one that can read as a wrong rating.
+      if(dec){n.textContent=m[1]+rest;return;}
+      // and if the tween is throttled and never completes, snap to the truth rather than sit on a lie
+      setTimeout(()=>{n.textContent=target.toFixed(0)+rest},2500);
       gsap.to(o,{v:target,duration:1.4,ease:'power1.out',scrollTrigger:{trigger:b,start:'top 92%'},
         onUpdate:()=>{n.textContent=o.v.toFixed(dec)+rest}});
     });
@@ -438,14 +508,75 @@
       onEnter:()=>gsap.to(cb,{y:0,duration:.6,ease:'back.out(1.4)'}),
       onLeaveBack:()=>gsap.to(cb,{y:'110%',duration:.4,ease:'power2.in'})});}
   }
+  // audit fix: open/closed status badge, computed from the SAME hours data already stamped
+  // into the page (<tr data-d="1,2,3,4,5,6"><td>Mon to Sat</td><td>11 AM to 8 PM</td></tr><tr data-d="0"><td>Sunday</td><td>Closed</td></tr>, the tr/data-d rows in #hours-badge). Unparseable or missing
+  // hours text ("Call to confirm" etc) leaves the plain hours line untouched instead of guessing.
+  (()=>{
+    const badge=document.getElementById('hours-badge'),out=document.getElementById('hours-badge-text');
+    if(!badge||!out)return;
+    const rows=[...badge.querySelectorAll('.hb-table tr')];
+    if(!rows.length)return;
+    const DAY=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    const toMin=(h,m,ap)=>{h=(+h)%12;if(/pm/i.test(ap))h+=12;return h*60+(+m||0)};
+    function parseDay(txt){
+      txt=(txt||'').trim();
+      if(!txt)return null;
+      if(/^closed$/i.test(txt))return[];
+      const ranges=[];
+      for(const part of txt.split(',')){
+        const m=part.match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm)?\s*(?:to|-|–|—)\s*(\d{1,2})(?::(\d{2}))?\s*(am|pm)?/i);
+        if(!m)return null;
+        let[,h1,m1,p1,h2,m2,p2]=m;
+        if(!p1&&p2)p1=p2; if(!p2&&p1)p2=p1;
+        if(!p1||!p2)return null;
+        let s=toMin(h1,m1,p1),e=toMin(h2,m2,p2);
+        if(e<=s)e+=1440;
+        ranges.push([s,e]);
+      }
+      return ranges;
+    }
+    const byDay={};
+    rows.forEach(r=>{
+      const ds=(r.dataset.d||'').split(',').filter(Boolean).map(Number);
+      const cell=r.cells[1];
+      if(!ds.length||!cell)return;
+      const parsed=parseDay(cell.textContent);
+      ds.forEach(d=>{byDay[d]=parsed});
+    });
+    const fmt=t=>{t=((t%1440)+1440)%1440;let h=Math.floor(t/60),m=t%60,ap=h>=12?'PM':'AM';h=h%12||12;
+      return m?`${h}:${String(m).padStart(2,'0')} ${ap}`:`${h} ${ap}`};
+    // The shop's hours are in ITS timezone, not the visitor's. Reading new Date() locally told a
+    // visitor in California that a Tampa shop opens at 5am (judge panel, 2026-08-07). All prospects
+    // are Tampa-area; if this template is ever used outside Eastern, make the zone a token.
+    const _tzNow=(()=>{const p=Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()).map(x=>[x.type,x.value]));return{dow:{Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[p.weekday],mins:(+p.hour%24)*60+(+p.minute)};})();
+    const dow=_tzNow.dow,mins=_tzNow.mins;
+    const today=byDay[dow];
+    if(Array.isArray(today)){
+      for(const[s,e]of today){
+        if(mins>=s&&mins<e){out.textContent='Open now · closes '+fmt(e);badge.classList.add('is-open');return}
+      }
+    }
+    const yest=byDay[(dow+6)%7];
+    if(Array.isArray(yest)){
+      for(const[,e]of yest){
+        if(e>1440){const e2=e-1440;if(mins<e2){out.textContent='Open now · closes '+fmt(e2);badge.classList.add('is-open');return}}
+      }
+    }
+    if(today===undefined||today===null)return; // unparseable/missing -> keep the plain hours line
+    for(let i=0;i<7;i++){
+      const d=(dow+i)%7,ranges=byDay[d];
+      if(!Array.isArray(ranges))continue;
+      for(const[s]of ranges){
+        const abs=i*1440+s;
+        if(abs>mins){out.textContent='Closed · opens '+fmt(s)+(i===0?'':' '+DAY[d]);badge.classList.add('is-closed');return}
+      }
+    }
+  })();
   // footer "today's hours": read the row whose data-d list contains today (0=Sun..6=Sat).
   // No-JS fallback: the slot is a plain "Hours" link to #visit.
   (()=>{const t=document.getElementById('ft-today');if(!t)return;
-    const row=[...document.querySelectorAll('#hours tr')].find(r=>(r.dataset.d||'').split(',').includes(String(new Date().getDay())));
+    const row=[...document.querySelectorAll('#hours tr')].find(r=>(r.dataset.d||'').split(',').includes(String({Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short'}).format(new Date())])));
     if(row&&row.cells.length>1)t.textContent='Today: '+row.cells[1].textContent;})();
-  // ponytail: preview-mode form, shows success only; wire to a form backend when the site is sold
-  document.getElementById('qform').addEventListener('submit',e=>{e.preventDefault();
-    document.getElementById('form-ok').style.display='block';e.target.reset();});
 </script>
 </body>
 </html>
