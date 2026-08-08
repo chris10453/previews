@@ -1,0 +1,89 @@
+{
+  "slug": "flawlessblendbarbershopr",
+  "downloaded_at": "2026-08-07T08:38:14+00:00",
+  "asset_dir": "template/assets/flawlessblendbarbershopr/",
+  "attribution_note": "Photos come from the place's OWN Google photo-category set (Exterior, Inside, By owner, ...), not from the DOM sidebar, so 'People also search for' competitor shots cannot leak in. attribution=unknown means the category label was unrecognised -- eyeball before using.",
+  "photos": [
+    {
+      "file": "01.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmWCpderJJfODmdHQkGTAlTlBnmCgGS6LIoHT-5G6CWNLqr3aP-Cw9zaGA_xyJ2HewdKUlMoCj_zxumRMsx1oT8417fPWrSdvtwKD978Sby2xlxN46pI4qYAChhrgmVx26p3uQC7w=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmWCpderJJfODmdHQkGTAlTlBnmCgGS6LIoHT-5G6CWNLqr3aP-Cw9zaGA_xyJ2HewdKUlMoCj_zxumRMsx1oT8417fPWrSdvtwKD978Sby2xlxN46pI4qYAChhrgmVx26p3uQC7w=w529-h298-k-no",
+      "container": "maps_photo_category:All",
+      "attribution": "primary_listing",
+      "bytes": 637772,
+      "width": 1600,
+      "height": 901
+    },
+    {
+      "file": "02.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlZNSx1Luqn2whAAENtEc9cbZA43ptPNU4j7QmkXw-yg8f5kKuhx5UXqdxk1NkGUQxhnmiiwsbVI5mMpNAf3aMBoRX_jaW4Tf2kFEkVEBpUccuDLPnJxH88XkI2lwL4Ir800xU=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlZNSx1Luqn2whAAENtEc9cbZA43ptPNU4j7QmkXw-yg8f5kKuhx5UXqdxk1NkGUQxhnmiiwsbVI5mMpNAf3aMBoRX_jaW4Tf2kFEkVEBpUccuDLPnJxH88XkI2lwL4Ir800xU=w224-h298-k-no",
+      "container": "maps_photo_category:Exterior",
+      "attribution": "primary_listing",
+      "bytes": 210008,
+      "width": 1500,
+      "height": 2000
+    },
+    {
+      "file": "03.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmr5xn3fRRbrvLWuHgSO4QJDtsPlRCMwSyNM_7xwgoWXyOENKC6y37FVI4nGuAsQnaMKSxZh99gq2Np0v2m-cWiQUXazddpay5ZU1cyLHt8QHQZmUt6XkQ9hIZlK8qV5yk1__Xru_LL5gWu=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmr5xn3fRRbrvLWuHgSO4QJDtsPlRCMwSyNM_7xwgoWXyOENKC6y37FVI4nGuAsQnaMKSxZh99gq2Np0v2m-cWiQUXazddpay5ZU1cyLHt8QHQZmUt6XkQ9hIZlK8qV5yk1__Xru_LL5gWu=w224-h398-k-no",
+      "container": "maps_photo_category:Videos",
+      "attribution": "primary_listing",
+      "bytes": 491867,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "04.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm2ubCin9ikRPloM7enKAKTI5PG3TO2FhtOxdyuzAgIa7ZWbtuOK-SRX6rUZ03TnAk_XBbkPVrAg8q8VQviu79aFaS4f6ThdV9LkrcY-m4LRW5mvir26iIJ_IFbS5RCICgPDdyQ=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm2ubCin9ikRPloM7enKAKTI5PG3TO2FhtOxdyuzAgIa7ZWbtuOK-SRX6rUZ03TnAk_XBbkPVrAg8q8VQviu79aFaS4f6ThdV9LkrcY-m4LRW5mvir26iIJ_IFbS5RCICgPDdyQ=w397-h298-k-no",
+      "container": "maps_photo_category:Inside",
+      "attribution": "primary_listing",
+      "bytes": 770740,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "file": "05.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnC7jd_GXyvWiaJmlY3PSycF2hA_V2TSrpOSevg1G4gyow5ogO93ZdLXRCiI4JYrccpfjGRXwSTgDo0kPwxuiQhMp-Ya8X8b0DILL0bVbtiWueXrx-66IUWGRUXh5uno0wcMpS2=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnC7jd_GXyvWiaJmlY3PSycF2hA_V2TSrpOSevg1G4gyow5ogO93ZdLXRCiI4JYrccpfjGRXwSTgDo0kPwxuiQhMp-Ya8X8b0DILL0bVbtiWueXrx-66IUWGRUXh5uno0wcMpS2=w224-h298-k-no",
+      "container": "maps_photo_category:Menu",
+      "attribution": "primary_listing",
+      "bytes": 1169650,
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "file": "06.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmBqbeZ3XoKzm-0RgAEwhGWfacK-0b0pYw4MgYJn0ISXKbZn_vCCVYPJJLM-5uRHICO6SA3WUiJ7DwK-alAsSt77KbcBS7KZV4UHCLALrl6uRslLWZTnfwmrMx9yk7UmUE-CFiJcQ=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmBqbeZ3XoKzm-0RgAEwhGWfacK-0b0pYw4MgYJn0ISXKbZn_vCCVYPJJLM-5uRHICO6SA3WUiJ7DwK-alAsSt77KbcBS7KZV4UHCLALrl6uRslLWZTnfwmrMx9yk7UmUE-CFiJcQ=w224-h298-k-no",
+      "container": "maps_photo_category:Hairstyle",
+      "attribution": "primary_listing",
+      "bytes": 795518,
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "file": "07.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk4Q73_yci2W6HtBE9wkGham7Jic_YxVLYv67egm1VEnz9oi7k6MH3XnxLdQXNHLBeZycxGZcBaTZCjGRI333PEZ9ev1fZ5oxyEXq_qQKM6N_1nBH1azngY2j7OyyJbe7bnT_8=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk4Q73_yci2W6HtBE9wkGham7Jic_YxVLYv67egm1VEnz9oi7k6MH3XnxLdQXNHLBeZycxGZcBaTZCjGRI333PEZ9ev1fZ5oxyEXq_qQKM6N_1nBH1azngY2j7OyyJbe7bnT_8=w224-h398-k-no",
+      "container": "maps_photo_category:By owner",
+      "attribution": "primary_listing",
+      "bytes": 576348,
+      "width": 1600,
+      "height": 2844
+    },
+    {
+      "file": "08.jpg",
+      "source_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlpHNgOn571ACAkHNAcQ9uUCyNsGmk0-_1hAJfxN9yyHKyN5VxGvWhghMaPIGsdUWhhLcH-S0FoRb1bFyOf1pGmfO899kPTc-BYedtd0mDJA4zfF1rHU_bF28SUgyxWct53XH7U=w1600",
+      "original_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlpHNgOn571ACAkHNAcQ9uUCyNsGmk0-_1hAJfxN9yyHKyN5VxGvWhghMaPIGsdUWhhLcH-S0FoRb1bFyOf1pGmfO899kPTc-BYedtd0mDJA4zfF1rHU_bF28SUgyxWct53XH7U=w224-h298-k-no-pi0-ya299-ro-0-fo100",
+      "container": "maps_photo_category:Street View & 360\u00b0",
+      "attribution": "primary_listing",
+      "bytes": 206573,
+      "width": 1600,
+      "height": 800
+    }
+  ],
+  "skipped": []
+}
